@@ -20,7 +20,7 @@ import {
   ColorMapping,
   Editor,
 } from "./pages";
-// import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import "./App.css";
 
@@ -32,14 +32,15 @@ function App() {
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
-            <button
-              type="button"
-              className="text-3xl p-3 hover: drop-shadow-xl hover:bg-light-gray text-white"
-              style={{ background: "blue", borderRadius: "50%" }}
-            >
-              <FiSettings />
-            </button>
-            {/* <Tooltip content="settings" position="Top"></Tooltip> */}
+            <TooltipComponent content="settings" position="Top">
+              <button
+                type="button"
+                className="text-3xl p-3 hover: drop-shadow-xl hover:bg-light-gray text-white"
+                style={{ background: "blue", borderRadius: "50%" }}
+              >
+                <FiSettings />
+              </button>
+            </TooltipComponent>
           </div>
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
