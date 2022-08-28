@@ -21,11 +21,11 @@ import {
   Editor,
 } from "./pages";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-
+import { useStateContext } from "./context/ContextProvider";
 import "./App.css";
 
 function App() {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
