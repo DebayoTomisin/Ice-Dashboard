@@ -9,9 +9,10 @@ import {
   Inject,
   AccumulationTooltip,
 } from "@syncfusion/ej2-react-charts";
+import { useStateContext } from "../../context/ContextProvider";
 
 const PieChart = ({ id, data, legendVisibility, height }) => {
-  const currentMode = "light";
+  const { currentMode } = useStateContext();
 
   return (
     <AccumulationChartComponent
@@ -35,10 +36,10 @@ const PieChart = ({ id, data, legendVisibility, height }) => {
           dataSource={data}
           xName="x"
           yName="y"
-          innerRadius="30%"
+          innerRadius="40%"
           startAngle={0}
           endAngle={360}
-          radius="70%"
+          radius="80%"
           explode
           explodeOffset="10%"
           explodeIndex={2}

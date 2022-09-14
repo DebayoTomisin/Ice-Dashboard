@@ -18,7 +18,7 @@ import {
 import { useStateContext } from "../../context/ContextProvider";
 
 const Stacked = ({ width, height }) => {
-  const currentMode = "Light";
+  const { currentMode } = useStateContext();
 
   return (
     <ChartComponent
