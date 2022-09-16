@@ -3,10 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import AppLayout from "./components/Layout";
 import AppRouter from "./routes";
+import { useStateContext } from "./context/ContextProvider";
 
 function App() {
+  const { currentMode } = useStateContext();
+
   return (
-    <div>
+    <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <AppLayout>
           <AppRouter />
